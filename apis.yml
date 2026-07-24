@@ -1,8 +1,18 @@
 aid: brava-home
 name: Brava Home
-description: 'Brava Home is a company surfaced as a portfolio company of cowboy-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Brava Home, Inc. is a Redwood City, California consumer-hardware company that
+  makes the Brava smart countertop oven — a connected cooking appliance that uses
+  its patented Pure Light infrared-lamp technology to sear, bake, air-fry,
+  dehydrate, toast, reheat, and slow-cook, controlled through the Brava Home
+  mobile app and a guided recipe platform. Brava sells direct-to-consumer through
+  a Shopify storefront at shop.brava.com. Brava does not publish a public
+  developer/device API; its machine-facing surface is agentic commerce — the
+  storefront exposes a Shopify-native Universal Commerce Protocol (UCP) profile
+  at /.well-known/ucp and a Model Context Protocol (MCP) endpoint so shopping
+  agents can search the catalog, build carts, and drive buyer-approved checkout.
+  Originally added to the API Evangelist network as a cowboy-ventures portfolio
+  lead, this profile has been enriched from Brava's real public surface.
 url: https://raw.githubusercontent.com/api-evangelist/brava-home/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +20,56 @@ x-backed-by:
 - cowboy-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://shop.brava.com/cdn/shop/files/favicon180x180_180x180.png?v=1622467377
 tags:
 - Company
 - Consumer
-apis: []
+- Smart Home
+- Kitchen
+- Cooking
+- Appliances
+- Connected Devices
+- IoT
+- E-commerce
+- Agentic Commerce
+apis:
+- name: Brava Storefront Commerce (UCP / MCP)
+  description: >-
+    Agentic-commerce surface for Brava's Shopify storefront. The store publishes a
+    Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp and a
+    native Model Context Protocol (MCP) endpoint that shopping agents call
+    (tools/list) to discover catalog-search, cart, checkout, fulfillment,
+    discount, and order tools. Shopify-provided; checkout requires contemporaneous
+    human buyer approval and is rate-limited per IP. This is a commerce surface,
+    not a Brava device/appliance API.
+  humanURL: https://shop.brava.com/llms.txt
+  baseURL: https://shop.brava.com/api/ucp/mcp
+  tags:
+  - Agentic Commerce
+  - MCP
+  - UCP
+  - E-commerce
+  properties:
+  - type: MCPServer
+    url: mcp/brava-home-mcp.yml
+  - type: WellKnown
+    url: well-known/brava-home-well-known.yml
+  - type: LLMsTxt
+    url: llms/brava-home-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +78,30 @@ maintainers:
 common:
 - type: Website
   url: https://www.brava.com
+- type: Pricing
+  url: https://shop.brava.com/
+- type: Blog
+  url: https://blog.brava.com/
+- type: Support
+  url: https://support.brava.com/hc/en-us
+- type: SignUp
+  url: https://shop.brava.com/account/register
+- type: Login
+  url: https://shop.brava.com/account/login
+- type: TermsOfService
+  url: https://www.brava.com/welcome/TermsofService
+- type: PrivacyPolicy
+  url: https://www.brava.com/welcome/Privacy
+- type: MCPServer
+  url: mcp/brava-home-mcp.yml
+- type: WellKnown
+  url: well-known/brava-home-well-known.yml
+- type: LLMsTxt
+  url: llms/brava-home-llms.txt
+- type: DomainSecurity
+  url: security/brava-home-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

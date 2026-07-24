@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://shop.brava.com/llms.txt
+discovery: https://shop.brava.com/.well-known/ucp
+server:
+  name: brava-shopping
+  transport: http
+  protocol: mcp
+  url: https://shop.brava.com/api/ucp/mcp
+  canonical_url: https://bravahome.myshopify.com/api/ucp/mcp
+  content_type: application/json
+  method: POST
+  description: >-
+    Brava's storefront (shop.brava.com) is a Shopify store that exposes a native
+    Model Context Protocol (MCP) endpoint via the Universal Commerce Protocol
+    (UCP, https://ucp.dev). Agents call MCP tools/list on the endpoint to
+    discover shopping tools (catalog search, cart, checkout, fulfillment, order,
+    discount). This is a Shopify-provided, provider-published agentic-commerce
+    surface — not a Brava device/API. Checkout requires contemporaneous human
+    buyer approval; the endpoint is rate-limited per IP (back off on 429).
+  spec: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+  supported_versions:
+  - '2026-04-08'
+  - '2026-01-23'
+# Tools are advertised dynamically via UCP capabilities + MCP tools/list.
+# The following are the UCP shopping capabilities the store declares in its
+# /.well-known/ucp profile (well-known/brava-home-ucp.json), which back the
+# MCP tool surface described in llms.txt:
+capabilities:
+- id: dev.ucp.shopping.catalog.search
+  description: Search the store catalog for products matching buyer intent.
+- id: dev.ucp.shopping.catalog.lookup
+  description: Look up a specific product/variant.
+- id: dev.ucp.shopping.cart
+  description: Create and manage a cart.
+- id: dev.ucp.shopping.checkout
+  description: Start and drive a checkout (buyer must approve payment).
+- id: dev.ucp.shopping.fulfillment
+  description: Set shipping address and method.
+- id: dev.ucp.shopping.discount
+  description: Apply and discover discounts.
+- id: dev.ucp.shopping.order
+  description: Track and retrieve orders.
+- id: dev.shopify.catalog
+  description: Shopify storefront catalog extension over UCP catalog.
+payment_handlers:
+- com.google.pay
+- dev.shopify.card
+- dev.shopify.shop_pay

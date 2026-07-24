@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/* on Brava hosts
+hosts:
+- host: https://shop.brava.com
+  documents:
+  - path: /.well-known/ucp
+    status: 200
+    file: brava-home-ucp.json
+    note: Universal Commerce Protocol (UCP) merchant profile — supported versions, MCP transport endpoint, shopping capabilities, and payment handlers (Shopify-native agentic commerce).
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.brava.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
