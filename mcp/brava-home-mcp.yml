@@ -11,22 +11,16 @@ server:
   canonical_url: https://bravahome.myshopify.com/api/ucp/mcp
   content_type: application/json
   method: POST
-  description: >-
-    Brava's storefront (shop.brava.com) is a Shopify store that exposes a native
-    Model Context Protocol (MCP) endpoint via the Universal Commerce Protocol
-    (UCP, https://ucp.dev). Agents call MCP tools/list on the endpoint to
-    discover shopping tools (catalog search, cart, checkout, fulfillment, order,
-    discount). This is a Shopify-provided, provider-published agentic-commerce
-    surface — not a Brava device/API. Checkout requires contemporaneous human
-    buyer approval; the endpoint is rate-limited per IP (back off on 429).
+  description: Brava's storefront (shop.brava.com) is a Shopify store that exposes a native Model Context
+    Protocol (MCP) endpoint via the Universal Commerce Protocol (UCP, https://ucp.dev). Agents call MCP
+    tools/list on the endpoint to discover shopping tools (catalog search, cart, checkout, fulfillment,
+    order, discount). This is a Shopify-provided, provider-published agentic-commerce surface — not a
+    Brava device/API. Checkout requires contemporaneous human buyer approval; the endpoint is rate-limited
+    per IP (back off on 429).
   spec: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
   supported_versions:
   - '2026-04-08'
   - '2026-01-23'
-# Tools are advertised dynamically via UCP capabilities + MCP tools/list.
-# The following are the UCP shopping capabilities the store declares in its
-# /.well-known/ucp profile (well-known/brava-home-ucp.json), which back the
-# MCP tool surface described in llms.txt:
 capabilities:
 - id: dev.ucp.shopping.catalog.search
   description: Search the store catalog for products matching buyer intent.
@@ -48,3 +42,11 @@ payment_handlers:
 - com.google.pay
 - dev.shopify.card
 - dev.shopify.shop_pay
+deployment:
+  mode: remote
+  endpoint: https://shop.brava.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
