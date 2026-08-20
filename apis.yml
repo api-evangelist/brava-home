@@ -44,6 +44,17 @@ tags:
 - Appliances
 - Connected Devices
 - IoT
+- E-Commerce
+- Agentic Commerce
+tags_raw:
+- Company
+- Consumer
+- Smart Home
+- Kitchen
+- Cooking
+- Appliances
+- Connected Devices
+- IoT
 - E-commerce
 - Agentic Commerce
 apis:
@@ -59,6 +70,11 @@ apis:
   humanURL: https://shop.brava.com/llms.txt
   baseURL: https://shop.brava.com/api/ucp/mcp
   tags:
+  - Agentic Commerce
+  - MCP
+  - UCP
+  - E-Commerce
+  tags_raw:
   - Agentic Commerce
   - MCP
   - UCP
