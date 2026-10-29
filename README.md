@@ -64,6 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Brava Home is a company surfaced as a portfolio company of cowboy-ventures and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Brava Home, Inc. is a Redwood City, California consumer-hardware company that makes the Brava smart countertop oven — a connected cooking appliance that uses its patented Pure Light infrared-lamp technology to sear, bake, air-fry, dehydrate, toast, reheat, and slow-cook, controlled through the Brava Home mobile app and a guided recipe platform. Brava sells direct-to-consumer through a Shopify storefront at shop.brava.com. Brava does not publish a public developer/device API; its machine-facing surface is agentic commerce — the storefront exposes a Shopify-native Universal Commerce Protocol (UCP) profile at /.well-known/ucp and a Model Context Protocol (MCP) endpoint so shopping agents can search the catalog, build carts, and drive buyer-approved checkout. Originally added to the API Evangelist network as a cowboy-ventures portfolio lead, this profile has been enriched from Brava's real public surface.
 
-Backed by: cowboy-ventures — https://www.brava.com
+**Areas:** Company · Consumer · Smart Home · Kitchen · Cooking · Appliances · Connected Devices · IoT · E-Commerce · Agentic Commerce
+
+## Brava Home on APIs.io
+
+Everything profiled for Brava Home is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/brava-home/](https://apis.io/providers/brava-home/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Brava Storefront Commerce (UCP / MCP)](https://apis.io/apis/brava-home/brava-storefront-commerce-ucp-mcp/) — Agentic-commerce surface for Brava's Shopify storefront. The store publishes a Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp and a…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [brava-shopping](https://apis.io/servers/brava-home/brava-shopping/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Brava Home Domain Security](https://apis.io/security/brava-home/brava-home-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.brava.com)
+- [Pricing](https://shop.brava.com/)
+- [Sign up](https://shop.brava.com/account/register)
+- [Support](https://support.brava.com/hc/en-us)
+- [Blog](https://blog.brava.com/)
+- [Terms of service](https://www.brava.com/welcome/TermsofService)
+- [Privacy policy](https://www.brava.com/welcome/Privacy)
+
+## API Evangelist rating
+
+**Kin Score 17.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 44.7 |
+
+**Agent readiness 3.1** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/brava-home/](https://apis.io/providers/brava-home/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Brava Home: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/brava-home/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
